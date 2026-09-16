@@ -2,7 +2,7 @@ package com.sneha.inventoryservice.dto;
 
 public class OrderCreatedEvent {
 
-    private Long id;
+    private Long orderId;
     private String itemName;
     private int quantity;
     private double price;
@@ -11,21 +11,21 @@ public class OrderCreatedEvent {
     public OrderCreatedEvent() {
     }
 
-    public OrderCreatedEvent(Long id, String itemName, int quantity,
-                             double price, String status) {
-        this.id = id;
+    public OrderCreatedEvent(Long orderId, String itemName,
+                             int quantity, double price, String status) {
+        this.orderId = orderId;
         this.itemName = itemName;
         this.quantity = quantity;
         this.price = price;
         this.status = status;
     }
 
-    public Long getId() {
-        return id;
+    public Long getOrderId() {
+        return orderId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 
     public String getItemName() {
